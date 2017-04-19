@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+*.swp
+*.orig
+node_modules
+stats.json
