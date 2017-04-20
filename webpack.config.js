@@ -6,7 +6,7 @@ var settings = {
   port: process.env.PORT || 5300
 }
 
-function buildConfig (options) {
+function buildConfig(options) {
   return {
     context: __dirname,
     devtool: 'cheap-module-eval-source-map',
@@ -51,12 +51,12 @@ function buildConfig (options) {
           test: /\.js$/,
           use: 'babel-loader',
           exclude: /node_modules/
-        },
+        }
       ]
     }
   }
 }
 
-module.exports = (function (options) {
+module.exports = (function(options) {
   return buildConfig(options)
 })(settings)
