@@ -4,7 +4,7 @@
   "description": "React Starter Project",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix src e2e",
+    "lint": "eslint --fix src e2e/specs e2e/pageobjects",
     "start": "NODE_ENV=development webpack-dev-server",
     "test": "NODE_ENV=test jest",
     "test:update": "npm run test -- -u"
