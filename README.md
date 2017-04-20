@@ -1,4 +1,5 @@
 # react-starter
+A starter kit for universal react applications.
 
 ## Includes:
 
@@ -8,6 +9,7 @@
 - **[Jest](https://facebook.github.io/jest)**
 - **[ESLint](http://eslint.org/)**
 - **[Prettier](https://github.com/prettier/prettier)**
+- **[WebdriverIO](http://webdriver.io)**
 
 ### Install:
 
@@ -22,6 +24,7 @@ cd react-starter
 make up # run app in dev mode
 make logs # show app logs
 make down # stop app
+make test # run unit tests
 ```
 
 ### End-to-end tests
