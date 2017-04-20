@@ -3,9 +3,11 @@ exports.config = {
   host: 'selenium',
   port: 4444,
   specs: ['test/**/*.js'],
-  capabilities: [{
-    browserName: 'chrome'
-  }],
+  capabilities: [
+    {
+      browserName: 'chrome'
+    }
+  ],
   sync: true,
   logLevel: 'silent',
   coloredLogs: true,
@@ -19,14 +21,14 @@ exports.config = {
   reporters: ['dot'],
   onPrepare: function() {
     console.log('Starting end2end tests...')
-    require('babel-register');
+    require('babel-register')
   },
   onComplete: function() {
     console.log('All done!')
   },
   before: function() {
-    var chai = require('chai');
-    global.expect = chai.expect;
-    chai.Should();
+    var chai = require('chai')
+    global.expect = chai.expect
+    chai.Should()
   }
 }
