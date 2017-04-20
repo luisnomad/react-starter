@@ -23,12 +23,7 @@ cd react-starter
 ```bash
 make up # run app in dev mode
 make logs # show app logs
-make down # stop app
 make test # run unit tests
-```
-
-### End-to-end tests
-
-```bash
 make e2e # run e2e tests
+make down # stop app
 ```

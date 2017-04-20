@@ -1,9 +1,16 @@
+import React, { Component, PropTypes } from 'react'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const App = () => (
+const App = ({ message }) => (
   <div>
-    It Works!
+    {message}
   </div>
 )
+
+const { string } = PropTypes
+App.propTypes = {
+  message: string.isRequired
+}
 
 export default App
