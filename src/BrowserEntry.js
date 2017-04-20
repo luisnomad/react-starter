@@ -1,10 +1,5 @@
 import React from 'react'
 import { render } from 'react-dom'
+import App from './components/App'
 
-class Welcome extends React.Component {
-  render() {
-    return <div>It Works!</div>
-  }
-}
-
-render(<Welcome />, document.getElementById('app'))
+render(<App />, document.getElementById('app'))
