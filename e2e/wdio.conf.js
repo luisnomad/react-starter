@@ -2,7 +2,7 @@ exports.config = {
   maxInstances: 1,
   host: 'selenium',
   port: 4444,
-  specs: ['test/**/*.js'],
+  specs: ['specs/**/*.js'],
   capabilities: [
     {
       browserName: 'chrome'
@@ -21,12 +21,12 @@ exports.config = {
   reporters: ['dot'],
   onPrepare: function() {
     console.log('Starting end2end tests...')
-    require('babel-register')
   },
   onComplete: function() {
     console.log('All done!')
   },
   before: function() {
+    require('babel-register')
     var chai = require('chai')
     global.expect = chai.expect
     chai.Should()
