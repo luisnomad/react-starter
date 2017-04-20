@@ -4,3 +4,4 @@
 *.orig
 node_modules
 stats.json
+errorShots

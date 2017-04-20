@@ -9,16 +9,23 @@
 - **[ESLint](http://eslint.org/)**
 - **[Prettier](https://github.com/prettier/prettier)**
 
-#### Install:
+### Install:
+
 ```bash
 git clone https://github.com/vigosan/react-starter.git
 cd react-starter
 ```
 
-#### Run:
+### Run:
 
 ```bash
 make up # run app in dev mode
 make logs # show app logs
 make down # stop app
+```
+
+### End-to-end tests
+
+```bash
+make e2e # run e2e tests
 ```

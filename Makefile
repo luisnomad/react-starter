@@ -1,4 +1,4 @@
-.PHONY: up down test bash logs
+.PHONY: up down test bash logs e2e
 
 up:
 	docker-compose up --build -d app
@@ -14,5 +14,8 @@ bash:
 
 logs:
 	docker-compose logs -f app
+
+e2e:
+	docker-compose run --rm e2e npm t
 
 default: up
