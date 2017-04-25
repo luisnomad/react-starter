@@ -1,6 +1,4 @@
-FROM node:latest
-
-RUN npm install -g yarn
+FROM node:7.9
 
 ENV APP /e2e
 RUN mkdir -p $APP
