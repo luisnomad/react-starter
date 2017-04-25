@@ -3,7 +3,7 @@ var path = require('path')
 var settings = {
   isDevelopment: process.env.NODE_ENV !== 'production',
   ip: process.env.IP || '0.0.0.0',
-  port: process.env.PORT || 5300
+  port: process.env.PORT || 8080
 }
 
 function buildConfig(options) {
