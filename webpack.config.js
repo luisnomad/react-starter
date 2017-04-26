@@ -26,6 +26,7 @@ function buildConfig(options) {
       hot: true,
       noInfo: false,
       port: options.port,
+      disableHostCheck: true,
       stats: {
         colors: true,
         reasons: true,
