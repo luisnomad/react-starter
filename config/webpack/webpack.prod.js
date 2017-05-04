@@ -13,7 +13,15 @@ function buildConfig() {
         'babel-polyfill',
         path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js')
       ],
-      vendor: ['prop-types', 'react', 'react-dom']
+      vendor: [
+        'prop-types',
+        'react',
+        'react-dom',
+        'react-redux',
+        'redux',
+        'redux-logger',
+        'redux-thunk'
+      ]
     },
     output: {
       path: path.join(__dirname, '..', '..', 'dist'),

@@ -4,9 +4,6 @@ exports[`App snapshot 1`] = `
 <div
   className="container"
 >
-  <img
-    src="test-file-stub"
-  />
   <span
     className="message"
   >
