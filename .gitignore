@@ -2,6 +2,7 @@
 *.log
 *.swp
 *.orig
+jest
 node_modules
 stats.json
 errorShots
