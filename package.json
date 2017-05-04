@@ -60,6 +60,7 @@
     }
   },
   "jest": {
+    "moduleDirectories": ["node_modules", "src"],
     "testPathIgnorePatterns": [
       "/e2e/"
     ]

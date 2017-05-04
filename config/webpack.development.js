@@ -33,6 +33,7 @@ function buildConfig(options) {
       }
     },
     resolve: {
+      modules: ['node_modules', 'src'],
       extensions: ['.js', '.json']
     },
     plugins: [
