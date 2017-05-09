@@ -19,6 +19,7 @@ function buildConfig(options) {
       pathinfo: true
     },
     devServer: {
+      contentBase: path.join(__dirname, '..', 'public'),
       inline: true,
       historyApiFallback: true,
       host: options.ip,

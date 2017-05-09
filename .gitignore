@@ -2,7 +2,8 @@
 *.log
 *.swp
 *.orig
+errorShots
 jest
 node_modules
+public/assets
 stats.json
-errorShots

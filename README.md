@@ -47,3 +47,13 @@ Run ``make up`` from the root directory to boot the development environment. The
 - Run tests ``make test``
 - Run End-to-End tests ``make e2e``
 - Stop development server ``make down``
+
+## Production
+
+### Bundle
+
+Run ``make build`` from the root directory to generate the js bundle. By default, it is generated in `public/assets/js/main.js` folder.
+
+### Serve
+
+There is an [Express](https://expressjs.com/) server configured for running in production. Just run ``npm start`` and the application will be available on [http://localhost:8080](http://localhost:8080) (make sure the development server is down to avoid port conflicts)
