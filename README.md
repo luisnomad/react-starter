@@ -1,7 +1,7 @@
 # react-starter
 A starter kit for universal react applications.
 
-## Includes:
+## Includes
 
 - **[Docker](https://www.docker.com)**
 - **[Webpack 2](https://webpack.js.org)**
@@ -12,7 +12,7 @@ A starter kit for universal react applications.
 - **[Prettier](https://github.com/prettier/prettier)**
 - **[WebdriverIO](http://webdriver.io)**
 
-### Install:
+## Install
 
 ```bash
 git clone https://github.com/vigosan/react-starter.git
@@ -26,12 +26,24 @@ The master branch does not include `Redux`, if you need `Redux`:
 git checkout redux
 ```
 
-### Run
+## Development
 
-```bash
-make up # run app in dev mode
-make logs # show app logs
-make test # run unit tests
-make e2e # run e2e tests
-make down # stop app
-```
+### Requirements
+
+  - [Docker](https://docs.docker.com/engine/understanding-docker) & [Docker Compose](https://docs.docker.com/compose/install)
+
+  Note: On Mac, if using Homebrew do ``brew cask install docker`` and that will install both Docker for Mac and Docker Compose.
+
+  - Makefile (it's probably already on your OS)
+
+### Set up
+
+Run ``make up`` from the root directory to boot the development environment. Then, the application will be available on [http://localhost:8080](http://localhost:8080)
+
+### Commands
+
+- Boot up development server ``make up``
+- Show logs ``make logs``
+- Run tests ``make test``
+- Run End-to-End tests ``make e2e``
+- Stop development server ``make down``
