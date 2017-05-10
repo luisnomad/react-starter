@@ -4,7 +4,8 @@
   "description": "React Starter Project",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "npm run clean && NODE_ENV=production webpack",
+    "clean": "rm -rf dist",
     "lint": "eslint --fix src e2e/specs e2e/pageobjects server",
     "start": "node server",
     "start:dev": "NODE_ENV=development webpack-dev-server",
@@ -26,6 +27,7 @@
     "eslint-plugin-prettier": "^2.0.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
+    "html-webpack-plugin": "^2.28.0",
     "jest": "^19.0.2",
     "prettier": "^1.2.2",
     "react-test-renderer": "^15.5.4",

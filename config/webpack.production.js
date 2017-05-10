@@ -1,45 +1,27 @@
 var webpack = require('webpack')
 var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function buildConfig() {
   return {
     context: path.resolve(__dirname, '..'),
-    devtool: 'cheap-module-source-ma',
+    devtool: 'cheap-module-source-map',
     entry: {
-      main: path.join(__dirname, '..', 'src', 'BrowserEntry.js')
+      main: path.join(__dirname, '..', 'src', 'BrowserEntry.js'),
+      vendor: [
+        'prop-types',
+        'react',
+        'react-dom'
+      ]
     },
     output: {
-      path: path.join(__dirname, '..', 'public'),
-      filename: 'assets/js/[name].js',
-      publicPath: '/',
-      pathinfo: true
+      path: path.join(__dirname, '..', 'dist'),
+      filename: 'assets/js/[name].[chunkhash].js',
+      publicPath: '/'
     },
     resolve: {
       modules: ['node_modules', 'src'],
       extensions: ['.js', '.json']
-    },
-    externals: {
-      react: {
-        root: 'React',
-        commonjs2: 'react',
-        commonjs: 'react',
-        amd: 'react',
-        umd: 'react'
-      },
-      'react-dom': {
-        root: 'ReactDOM',
-        commonjs2: 'react-dom',
-        commonjs: 'react-dom',
-        amd: 'react-dom',
-        umd: 'react-dom'
-      },
-      'prop-types': {
-        root: 'PropTypes',
-        commonjs2: 'prop-types',
-        commonjs: 'prop-types',
-        amd: 'prop-types',
-        umd: 'prop-types'
-      },
     },
     plugins: [
       new webpack.DefinePlugin({
@@ -56,8 +38,12 @@ function buildConfig() {
           comments: false,
         }
       }),
-      new webpack.optimize.OccurrenceOrderPlugin(),
-      new webpack.optimize.AggressiveMergingPlugin()
+      new webpack.optimize.CommonsChunkPlugin({
+        name: ['vendor', 'manifest']
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/index.html'
+      })
     ],
     module: {
       rules: [

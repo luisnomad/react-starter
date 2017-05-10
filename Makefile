@@ -1,7 +1,7 @@
 .PHONY: up down test bash logs e2e
 
 up:
-	docker-compose up --build -d app
+	docker-compose up -d app
 
 down:
 	docker-compose down
