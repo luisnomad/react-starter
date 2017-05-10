@@ -1,4 +1,4 @@
-.PHONY: up down test bash logs e2e
+.PHONY: up down test bash logs e2e build
 
 up:
 	docker-compose up -d app
@@ -14,6 +14,9 @@ bash:
 
 logs:
 	docker-compose logs -f app
+
+build:
+	docker-compose run --rm app yarn build
 
 e2e:
 	docker-compose run --rm e2e yarn test

@@ -47,13 +47,26 @@ Run ``make up`` from the root directory to boot the development environment. The
 - Run tests ``make test``
 - Run End-to-End tests ``make e2e``
 - Stop development server ``make down``
+- Build the application ``make build``
 
 ## Production
 
 ### Bundle
 
-Run ``make build`` from the root directory to generate the js bundle. By default, it is generated in `public/assets/js/main.js` folder.
+Run ``make build`` from the root directory to generate the `index.html` and `main.js` bundle. By default, both files are located in `dist` folder.
 
-### Serve
+### Deploy static site
+
+You can deploy easily the static site using [Surge](https://surge.sh/):
+
+```bash
+npm install --global surge
+make build
+surge -p dist
+```
+
+You'll be promted to introduce your email and a password.
+
+### WIP
 
 There is an [Express](https://expressjs.com/) server configured for running in production. Just run ``npm start`` and the application will be available on [http://localhost:8080](http://localhost:8080) or ``PORT=8000 npm start`` if you want to user other port.
