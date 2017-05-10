@@ -2,7 +2,6 @@
 *.log
 *.swp
 *.orig
-dist
 errorShots
 jest
 node_modules

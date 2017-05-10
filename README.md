@@ -55,7 +55,7 @@ Run ``make up`` from the root directory to boot the development environment. The
 
 Run ``make build`` from the root directory to generate the `index.html` and `main.js` bundle. By default, both files are located in `dist` folder.
 
-### Deploy static site
+### Deployment for Static Sites
 
 You can deploy easily the static site using [Surge](https://surge.sh/):
 
@@ -67,6 +67,6 @@ surge -p dist
 
 You'll be promted to introduce your email and a password.
 
-### WIP
+### Deployment for Dynamic Sites
 
 There is an [Express](https://expressjs.com/) server configured for running in production. Just run ``npm start`` and the application will be available on [http://localhost:8080](http://localhost:8080) or ``PORT=8000 npm start`` if you want to user other port.

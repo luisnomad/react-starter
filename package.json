@@ -7,7 +7,7 @@
     "build": "npm run clean && NODE_ENV=production webpack",
     "clean": "rm -rf dist",
     "lint": "eslint --fix src e2e/specs e2e/pageobjects server",
-    "start": "node server",
+    "start": "NODE_ENV=production node server",
     "start:dev": "NODE_ENV=development webpack-dev-server",
     "test": "NODE_ENV=test jest",
     "test:update": "npm run test -- -u"

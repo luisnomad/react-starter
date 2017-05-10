@@ -1,5 +1,4 @@
 const express = require('express')
-const webpack = require('webpack')
 const path = require('path')
 
 module.exports = function(app) {
