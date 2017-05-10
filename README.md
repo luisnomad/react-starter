@@ -56,4 +56,4 @@ Run ``make build`` from the root directory to generate the js bundle. By default
 
 ### Serve
 
-There is an [Express](https://expressjs.com/) server configured for running in production. Just run ``npm start`` and the application will be available on [http://localhost:8080](http://localhost:8080) (make sure the development server is down to avoid port conflicts)
+There is an [Express](https://expressjs.com/) server configured for running in production. Just run ``npm start`` and the application will be available on [http://localhost:8080](http://localhost:8080) or ``PORT=8000 npm start`` if you want to user other port.
