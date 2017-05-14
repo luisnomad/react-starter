@@ -1,11 +1,11 @@
-.App {
+.container {
   display: flex;
   align-items: center;
   min-height: 24em;
   justify-content: center;
 }
 
-.App--message {
+.message {
   max-width: 50%;
 }
 

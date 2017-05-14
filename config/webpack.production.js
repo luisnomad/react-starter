@@ -54,7 +54,16 @@ function buildConfig() {
         },
         {
           test: /\.css$/,
-          use: ExtractTextPlugin.extract({ use: 'css-loader' })
+          use: ExtractTextPlugin.extract({
+            use: {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                modules: true,
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            }
+          })
         }
       ]
     }

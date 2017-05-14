@@ -2,10 +2,10 @@
 
 exports[`App snapshot 1`] = `
 <div
-  className="App"
+  className="container"
 >
   <span
-    className="App--message"
+    className="message"
   >
     It Works!
   </span>

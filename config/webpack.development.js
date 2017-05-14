@@ -65,7 +65,11 @@ function buildConfig(options) {
               loader: 'style-loader'
             },
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
             }
           ]
         }

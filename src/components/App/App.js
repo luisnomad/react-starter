@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styles from './App.css'
 
 const App = ({ message }) => (
-  <div className="App">
-    <span className="App--message">{message}</span>
+  <div className={styles.container}>
+    <span className={styles.message}>{message}</span>
   </div>
 )
 
