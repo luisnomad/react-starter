@@ -75,6 +75,9 @@
     ],
     "testPathIgnorePatterns": [
       "/e2e/"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/__mocks__/fileMock.js"
+    }
   }
 }
