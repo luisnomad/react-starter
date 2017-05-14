@@ -1,5 +1,6 @@
 var webpack = require('webpack')
 var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function buildConfig() {
@@ -8,11 +9,7 @@ function buildConfig() {
     devtool: 'cheap-module-source-map',
     entry: {
       main: path.join(__dirname, '..', 'src', 'BrowserEntry.js'),
-      vendor: [
-        'prop-types',
-        'react',
-        'react-dom'
-      ]
+      vendor: ['prop-types', 'react', 'react-dom']
     },
     output: {
       path: path.join(__dirname, '..', 'dist'),
@@ -35,11 +32,14 @@ function buildConfig() {
           screw_ie8: true
         },
         output: {
-          comments: false,
+          comments: false
         }
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: ['vendor', 'manifest']
+      }),
+      new ExtractTextPlugin({
+        filename: 'assets/css/[name].[contenthash:8].css'
       }),
       new HtmlWebpackPlugin({
         template: './src/index.html'
@@ -51,6 +51,10 @@ function buildConfig() {
           test: /\.js$/,
           use: 'babel-loader',
           exclude: /node_modules/
+        },
+        {
+          test: /\.css$/,
+          use: ExtractTextPlugin.extract({ use: 'css-loader' })
         }
       ]
     }
