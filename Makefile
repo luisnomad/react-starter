@@ -1,4 +1,4 @@
-.PHONY: up down test bash logs e2e build
+.PHONY: up down test bash logs e2e build reload
 
 up:
 	docker-compose up -d app
@@ -20,5 +20,9 @@ build:
 
 e2e:
 	docker-compose run --rm e2e yarn test
+
+reload:
+	make down
+	make up
 
 default: up
