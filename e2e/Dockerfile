@@ -1,4 +1,4 @@
-FROM node:7.9
+FROM node:6.10
 
 ENV APP /e2e
 RUN mkdir -p $APP
@@ -9,4 +9,3 @@ COPY yarn.lock $APP/yarn.lock
 WORKDIR $APP
 
 RUN yarn install --pure-lockfile
-
