@@ -4,12 +4,12 @@
   "description": "React Starter Project",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && NODE_ENV=production webpack",
+    "build": "npm run clean && webpack --config config/webpack/webpack.prod.js",
     "clean": "rm -rf dist",
     "lint": "eslint --fix src e2e/specs e2e/pageobjects server",
     "start": "NODE_ENV=production node server",
-    "start:dev": "NODE_ENV=development webpack-dev-server",
-    "test": "NODE_ENV=test jest",
+    "start:dev": "webpack-dev-server --config config/webpack/webpack.dev.js",
+    "test": "jest",
     "test:update": "npm run test -- -u"
   },
   "author": "Vicent Gozalbes <vigosan@gmail.com>",

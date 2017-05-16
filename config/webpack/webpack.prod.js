@@ -5,14 +5,14 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function buildConfig() {
   return {
-    context: path.resolve(__dirname, '..'),
+    context: path.resolve(__dirname, '..', '..'),
     devtool: 'cheap-module-source-map',
     entry: {
-      main: path.join(__dirname, '..', 'src', 'BrowserEntry.js'),
+      main: path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js'),
       vendor: ['prop-types', 'react', 'react-dom']
     },
     output: {
-      path: path.join(__dirname, '..', 'dist'),
+      path: path.join(__dirname, '..', '..', 'dist'),
       filename: 'assets/js/[name].[chunkhash].js',
       publicPath: '/'
     },
@@ -22,9 +22,7 @@ function buildConfig() {
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-        }
+        'process.env.NODE_ENV': JSON.stringify('production')
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: {
@@ -42,7 +40,7 @@ function buildConfig() {
         filename: 'assets/css/[name].[contenthash:8].css'
       }),
       new HtmlWebpackPlugin({
-        template: './src/index.html'
+        template: path.join(__dirname, '..', '..', 'src', 'index.html')
       })
     ],
     module: {

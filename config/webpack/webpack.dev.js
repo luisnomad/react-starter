@@ -8,19 +8,19 @@ var settings = {
 
 function buildConfig(options) {
   return {
-    context: path.resolve(__dirname, '..'),
+    context: path.resolve(__dirname, '..', '..'),
     devtool: 'cheap-module-eval-source-map',
     entry: {
-      main: path.join(__dirname, '..', 'src', 'BrowserEntry.js')
+      main: path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js')
     },
     output: {
-      path: path.join(__dirname, '..', 'dist'),
+      path: path.join(__dirname, '..', '..', 'dist'),
       filename: 'assets/js/[name].js',
       publicPath: '/',
       pathinfo: true
     },
     devServer: {
-      contentBase: path.join(__dirname, '..', 'dist'),
+      contentBase: path.join(__dirname, '..', '..', 'dist'),
       inline: true,
       historyApiFallback: true,
       host: options.ip,
@@ -39,10 +39,13 @@ function buildConfig(options) {
       extensions: ['.js', '.json']
     },
     plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('development')
+      }),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/index.html'
+        template: path.join(__dirname, '..', '..', 'src', 'index.html')
       })
     ],
     module: {
