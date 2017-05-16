@@ -75,6 +75,15 @@ function buildConfig(options) {
               }
             }
           ]
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              name: 'assets/media/[name].[ext]'
+            }
+          }
         }
       ]
     }

@@ -3,6 +3,5 @@
 *.swp
 *.orig
 errorShots
-jest
 node_modules
 stats.json

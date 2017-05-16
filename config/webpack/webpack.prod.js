@@ -62,6 +62,18 @@ function buildConfig() {
               }
             }
           })
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                name: 'assets/media/[name].[hash:8].[ext]',
+                limit: 40000
+              }
+            }
+          ]
         }
       ]
     }
