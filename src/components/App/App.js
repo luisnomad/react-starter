@@ -4,11 +4,12 @@ import Logo from '../Logo'
 import Message from '../Message'
 import styles from './App.css'
 
-const App = ({ message }) =>
+const App = ({ message }) => (
   <div className={styles.container}>
     <Logo />
     <Message text="It Works!" />
   </div>
+)
 
 const { string } = PropTypes
 App.propTypes = {
