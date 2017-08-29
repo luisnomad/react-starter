@@ -1,4 +1,4 @@
-FROM node:8.1.2
+FROM node:8.4.0
 
 ENV APP /app
 RUN mkdir -p $APP
