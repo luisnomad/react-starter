@@ -8,7 +8,10 @@ function buildConfig() {
     context: path.resolve(__dirname, '..', '..'),
     devtool: 'cheap-module-source-map',
     entry: {
-      main: path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js'),
+      main: [
+        'babel-polyfill',
+        path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js')
+      ],
       vendor: ['prop-types', 'react', 'react-dom']
     },
     output: {

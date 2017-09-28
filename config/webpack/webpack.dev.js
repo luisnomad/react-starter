@@ -11,7 +11,10 @@ function buildConfig(options) {
     context: path.resolve(__dirname, '..', '..'),
     devtool: 'cheap-module-source-map',
     entry: {
-      main: path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js')
+      main: [
+        'babel-polyfill',
+        path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js')
+      ]
     },
     output: {
       path: path.join(__dirname, '..', '..', 'dist'),
