@@ -9,7 +9,7 @@ var settings = {
 function buildConfig(options) {
   return {
     context: path.resolve(__dirname, '..', '..'),
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-source-map',
     entry: {
       main: path.join(__dirname, '..', '..', 'src', 'BrowserEntry.js')
     },
