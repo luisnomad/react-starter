@@ -5,6 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function buildConfig() {
   return {
+    mode: 'production',
     context: path.resolve(__dirname, '..', '..'),
     devtool: 'cheap-module-source-map',
     entry: {
